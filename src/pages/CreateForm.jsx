@@ -109,8 +109,8 @@ const CreateForm = () => {
     };
 
     const request = isEditMode
-      ? axios.put(`http://localhost:5000/form/${id}/edit`, formData)
-      : axios.post("http://localhost:5000/form/create", formData);
+      ? axios.put(`https://form-builder-backend-sigma.vercel.app/form/${id}/edit`, formData)
+      : axios.post('https://form-builder-backend-sigma.vercel.app/form/create', formData);
 
     request
       .then(() => {

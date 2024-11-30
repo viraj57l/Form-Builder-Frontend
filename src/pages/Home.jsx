@@ -11,7 +11,7 @@ const Home = () => {
     const [forms,setForms]=useState([]);
 
     useEffect (()=>{
-        axios.get('http://localhost:5000/')
+        axios.get('https://form-builder-backend-sigma.vercel.app/')
         .then((response)=>{
             setForms(response.data.forms);
         })
@@ -24,7 +24,7 @@ const Home = () => {
     const handleDelete =(id) =>{
       if(window.confirm('Are you sure want to delete this form?')){
         axios
-            .delete(`http://localhost:5000/form/${id}`)
+            .delete(`https://form-builder-backend-sigma.vercel.app/form/${id}`)
             .then((response)=>{
               //after deletion updating states
               setForms(forms.filter((form)=> form._id !== id));

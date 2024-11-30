@@ -15,7 +15,7 @@ const ViewForm = () => {
 
     useEffect(()=>{
 
-        const formUrl = `http://localhost:5000/form/${id}`;
+        const formUrl = `https://form-builder-backend-sigma.vercel.app/form/${id}`;
         //fetch form data by ID
 
         axios
@@ -56,7 +56,7 @@ const ViewForm = () => {
         
 
         axios
-        .post(`http://localhost:5000/form/${id}/submitForm`,responseData)
+        .post(`https://form-builder-backend-sigma.vercel.app/form/${id}/submitForm`,responseData)
         .then((response)=>{
             alert('Form submitted successfully!');
             console.log('Response from backend:', response.data);
